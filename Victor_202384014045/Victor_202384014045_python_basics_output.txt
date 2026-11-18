@@ -1,0 +1,34 @@
+Victor - 202384014045
+Extra Python practice
+
+1. Install Python
+   version:     3.14.10
+   interpreter: D:\Python314\python.exe
+
+2. Hello World
+   Hello World
+
+3. Hello World in a function
+   Hello World
+
+4. Hello World five times (loop)
+   1. Hello World
+   2. Hello World
+   3. Hello World
+   4. Hello World
+   5. Hello World
+
+5. Make a list of 5 numbers
+   [42, 7, 19, 3, 88]
+
+6. Print the list of 5 numbers
+   42
+   7
+   19
+   3
+   88
+
+7. Sort the list of 5 numbers and print it
+   original: [42, 7, 19, 3, 88]
+   sorted(): [3, 7, 19, 42, 88]
+   .sort():  [3, 7, 19, 42, 88]
