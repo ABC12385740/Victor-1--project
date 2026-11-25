@@ -1,134 +1,85 @@
-# Victor's Project
+# Victor 202384014045 — Senior Capstone Project
 
-## Student ID: 202384014045 — Maybe using HTML, or JS, web
+## Everything I built for the course, in one folder
 
-Hi, I'm **Victor** (student ID **202384014045**). This is my `README.md` for
-the **Senior Capstone Project**. I forked the course repository, and this is the
-folder I upload inside my fork.
+I'm **Victor**, student ID **202384014045**, class C-Shaanxi 2026-2027 · SCP.
+This is the folder I upload inside my public fork of
+[proxsi/Senior-Capstone-Project](https://github.com/proxsi/Senior-Capstone-Project).
 
-I want to build a **campus second-hand textbook exchange**: one small web app
-where a student lists a book with its course code, and the next student finds
-it by searching that code instead of scrolling through a WeChat group. I have
-bought a used textbook this way myself, and I want to turn that messy
-six-message deal into something that actually works.
+| Folder | What it is | How to run it |
+| --- | --- | --- |
+| [`capstone-project/`](capstone-project/) | My project idea in the README skeleton from class, plus a runnable version of the flowchart inside it | `python Victor_202384014045.py` |
+| [`class-04-python-basics/`](class-04-python-basics/) | The seven Python tasks from `FOR-STUDENTS-WITHOUT-PROJECTS.md` | `python VICTOR_CLASS_04_PYTHON_BASICS.py` |
+| [`tetris-game/`](tetris-game/) | The **PLAY THE GAME** option from the class list: a small Tetris site served by Flask | `Ctrl+Shift+B` in VS Code, or double-click `run.bat` |
 
-### Who it is for
+## What is in each folder
 
-- **Sellers** — students who finished a course and want the book out of their room.
-- **Buyers** — students who need the right edition for a specific course.
-- **Course staff** — one link to share instead of answering the same question.
+### 1. `capstone-project`
 
-### What version 1 will do
+- `README.md` — my project idea, using the same structure we typed in class:
+  a title, a subtitle, a list, `---`, `### Mermaid`, `### Python`.
+- `Victor_202384014045.py` — his flowchart made runnable: `Start → Decision? →
+  Yes/No → End`, printed step by step.
+- `Victor_202384014045_flowchart.mmd` — the diagram on its own, for reuse.
+- `Victor_202384014045_python_basics.py` — my extra practice: Hello World, a
+  function, a loop, a list, sorting.
+- `docs/` — the longer project overview and a GitHub upload guide.
 
-1. Sign up and sign in with a student e-mail address.
-2. Post a book: title, course code, condition, price, and one photo.
-3. Search and filter by course code, price, and condition.
-4. Message the seller from the listing page.
-5. Mark a listing as sold.
+### 2. `class-04-python-basics`
 
-### Tech stack
+The checklist, all seven items, in one script:
 
-- Python 3 and Flask for the back end
-- HTML, CSS, and JavaScript for the front end
-- SQLite for the first version, PostgreSQL later
-- Git and GitHub for version control
+1. Install Python
+2. Write Hello World in Python
+3. Write Hello World in a Python function
+4. Print Hello World five times with a loop
+5. Make a list of five numbers
+6. Print that list
+7. Sort the list and print it
 
----
+`output.txt` holds the real run, so nobody has to take my word for it.
 
-### Mermaid
+### 3. `tetris-game`
 
-The flowchart from the class example, drawn with Mermaid:
+A Flask page at <http://127.0.0.1:5000> that plays Tetris in the browser:
 
-```mermaid
-flowchart LR
-    A[Start] --> B{Decision?}
-    B -->|Yes| C[Process]
-    B -->|No| D[End]
-    C --> D
-```
+- seven pieces, rotation with wall kicks, ghost preview
+- score, lines, level, and a speed-up every ten lines
+- pause and restart, plus on-screen buttons on a phone
+- a top-10 leaderboard saved on the server (`data/scores.json`)
 
-### Python
+In VS Code press `Ctrl+Shift+B`: from this folder **or** from `tetris-game/` it starts
+the server and opens the page. With the Python extension installed, `F5` starts it
+under the debugger instead.
 
-The runnable version is in
-[`Victor_202384014045.py`](Victor_202384014045.py). It starts with the class
-example:
-
-```python
-print("Hello world")
-```
-
-Then it follows the same Yes/No flow and prints every step.
-
-Run it from this folder:
+## How to check it all in one go
 
 ```bash
-python Victor_202384014045.py
+python capstone-project/Victor_202384014045.py
+python class-04-python-basics/VICTOR_CLASS_04_PYTHON_BASICS.py
+cd tetris-game && python -m pip install -r requirements.txt && python app.py
 ```
 
-Expected output:
+## The naming rule
 
-```text
-Hello world
-Victor - 202384014045
+Every file I wrote carries **Victor (202384014045)** — in the file name where GitHub allows it,
+and in a header comment otherwise.
 
-Start
-Decision?
-Yes -> Process
-Process -> End
-```
+The exceptions are files whose names a tool fixes, and files generated at run
+time:
 
-### Extra Python practice
-
-[`Victor_202384014045_python_basics.py`](Victor_202384014045_python_basics.py)
-contains my extra practice: Hello World, a function, a loop, a list, and
-sorting. The saved output is in
-[`Victor_202384014045_python_basics_output.txt`](Victor_202384014045_python_basics_output.txt).
-
----
-
-## Files in this folder
-
-```text
-Victor_202384014045/
-├── README.md
-├── Victor_202384014045.py
-├── Victor_202384014045_output.txt
-├── Victor_202384014045_flowchart.mmd
-├── Victor_202384014045_python_basics.py
-├── Victor_202384014045_python_basics_output.txt
-├── docs/
-│   ├── Victor_202384014045_project-overview.md
-│   └── Victor_202384014045_GITHUB_UPLOAD_GUIDE.md
-├── .vscode/
-│   ├── launch.json
-│   └── tasks.json
-└── .gitignore
-```
-
-## How to open and run it in VS Code
-
-1. Open the `Victor_202384014045` folder in VS Code
-   (`File → Open Folder…`).
-2. Open the integrated terminal (`Terminal → New Terminal`) and run:
-
-   ```bash
-   python Victor_202384014045.py
-   ```
-
-3. Or press `Ctrl+Shift+B` and choose **Run Victor 202384014045 (Python)**.
-4. With the Python extension installed, press `F5` to run the debug
-   configuration in `.vscode/launch.json`. If VS Code asks to install the
-   Python extension the first time, accept it.
-
-## Naming
-
-Every file I created carries `Victor_202384014045`. The only exceptions are
-`README.md`, `.gitignore`, and the two `.vscode/*.json` files, because GitHub
-and VS Code require those exact names. The README and both Python files contain
-my name and student ID.
+- `.vscode/*.json` — VS Code configuration, which has no place for a header
+- `data/scores.json`, `class-04-python-basics/output.txt` — written by the
+  programs themselves
+- `README.md`, `.gitignore`, `requirements.txt`, `run.bat`, `app.py` — fixed
+  names, but the first lines of all of those except `.gitignore` carry the name
+  and the student ID
 
 ## Course repository
 
-- Forked from: <https://github.com/proxsi/Senior-Capstone-Project>
-- Submission: fork the repository, keep the fork public, and upload this
-  folder inside the fork.
+- Forked from <https://github.com/proxsi/Senior-Capstone-Project>
+- Submission: fork it, keep the fork **public**, and upload this folder inside it.
+
+---
+
+Author: **Victor** — student ID **202384014045**
